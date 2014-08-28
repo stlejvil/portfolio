@@ -1,22 +1,21 @@
 {
-  "name": "OpenShift-Sample-App",
-  "version": "1.0.0",
-  "description": "OpenShift Sample Application",
+  "name": "portfolio",
+  "version": "0.1.0",
+  "description": "Stlejvil's portfolio",
   "keywords": [
     "OpenShift",
     "Node.js",
-    "application",
-    "openshift"
+    "Express"
   ],
   "author": {
-    "name": "OpenShift",
-    "email": "ramr@example.org",
-    "url": "http://www.openshift.com/"
+    "name": "Stlejvil",
+    "email": "arnaud.pigne@gmail.com",
+    "url": "http://www.stlejvil.eu"
   },
-  "homepage": "http://www.openshift.com/",
+  "homepage": "http://www.stlejvil.eu",
   "repository": {
     "type": "git",
-    "url": "https://github.com/openshift/origin-server"
+    "url": "https://github.com/stlejvil"
   },
 
   "engines": {
