@@ -1,4 +1,4 @@
-/.sass-cache/*
+/public/.sass-cache/*
+/public/*.bowerrc
 *.DS_Store
-*.bowerrc
 /openshiftBackup/*
