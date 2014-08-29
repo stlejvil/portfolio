@@ -14,7 +14,6 @@ server.get('/', function(req, res) {
     res.render('index.jade');
 });
 
-// server.listen(8080);
 server.listen(server.port, server.ipaddress, function() {
     console.log('%s: Node server started on %s:%d ...',
         Date(Date.now() ), server.ipaddress, server.port);
