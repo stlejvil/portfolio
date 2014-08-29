@@ -1,0 +1,39 @@
+<root>
+	<galerie>
+		<n>galerie/photo_01.jpg</n>
+		<n>galerie/shuncil_logo_red.png</n>
+		<n>galerie/150_bohren.jpg</n>
+		<n>galerie/150_whourkr.jpg</n>
+		<n>galerie/150_webdoc.jpg</n>
+		<n>galerie/150_blackbooks.jpg</n>
+		<n>galerie/150_davinci.jpg</n>
+		<n>galerie/150_daria.jpg</n>
+		<n>galerie/150_mediatheque.jpg</n>
+		<n>galerie/150_pattern.jpg</n>
+		<n>galerie/150_cubetron.jpg</n>
+		<n>galerie/150_comp.jpg</n>
+		<n>galerie/150_abstrait.jpg</n>
+		<n>galerie/150_absinthe.jpg</n>
+		<n>galerie/150_mevecto.jpg</n>
+		<n>galerie/150_iggy.jpg</n>
+	</galerie>
+	<expo>
+		<n>expo/bohren.jpg</n>
+		<n>expo/whourkr.jpg</n>
+		<n>expo/webdoc.jpg</n>
+		<n>expo/blackbooks.jpg</n>
+		<n>expo/davinci.jpg</n>
+		<n>expo/daria.jpg</n>
+		<n>expo/mediatheque.jpg</n>
+		<n>expo/pattern.jpg</n>
+		<n>expo/cubetron.jpg</n>
+		<n>expo/comp.jpg</n>
+		<n>expo/abstrait.jpg</n>
+		<n>expo/absinthe.jpg</n>
+		<n>expo/mevecto.jpg</n>
+		<n>expo/iggy.jpg</n>
+	</expo>
+	<about>
+		<n><![CDATA[Mon nom est <b>Shuncil</b>.<br>Je suis né en Bretagne, j'ai vécu en France et je suis actuellement étudiant à l’<b><a href="http://www.infographie-sup.be/">HEAJ</a></b> de Namur en Belgique. Je m’intéresse de plus en plus au <b>multimédia</b> et à son <b>intégration web</b>. J’aime <b>expérimenter</b> des choses qui éveillent les sens de l’utilisateur, afin de faciliter, ou de créer une expérience particulière, unique. L’<b>intéractivité</b> me passionne.<br>Lorsque je ne développe pas, je joue de la <b>musique</b>, fais de la <b>photo</b>, améliore ma <b>culture en tous genre</b>. La <b>curiosité</b>, et l’<b>ouverture d’esprit</b>, sont mes plus grands atouts. Ce qui explique pourquoi j’apprécie, autant le <b>metal</b>, que le jazz, le classique, le blues, le rock. Ces styles qui pour certains s’opposeraient, ne sont pas des extrêmes pour moi.<br><p align='right'><a href='mailto:arnaud.pignel@gmail.com'><b>arnaud.pigne@gmail.com</b></a></p><p align='right'><a href='http://arnaud-pigne.infographie-heaj.be/cv.pdf'><b>CV</b></a></p>]]></n>
+	</about>
+</root>

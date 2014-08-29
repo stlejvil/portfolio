@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Musivation</title>
+	<script src="jquery-2.0.3.min.js"></script>
+	<script src="isEmail.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#form').submit(function(){
+				email = $('input[name="mail"]').val();
+				msg = "";
+				if (email != 0) {
+					if (isEmail(email) == true){
+						data = [];
+						data[0] = $('input[name="mail"]').val();
+						$.ajax({
+		                    url: "secu.php",
+		                    async: false,
+		                    cache: false,
+		                    type: 'POST',
+		                    data: {'email' : data[0]},
+			                    success: function(html){
+			                        msg = "You should receive an email soon."
+			                        $('#form').remove();
+			                    }
+                		});
+					} else {
+					    msg = "Invalid email."; 
+					}
+				} else {
+					msg = "It's empty.";
+				}
+				$('#result').html(msg);
+				return false;
+			});
+		});
+	</script>
+	<link rel="stylesheet" type="text/css" href="reset.css">
+	<style type="text/css">
+		body {
+			font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+			color: #FFF;
+			background-color: #D13F31;
+		}
+		#background {
+			position: fixed;
+		    top: 0px;
+		    left: 0px;
+			background-color: #1A202C;
+			width: 50%;
+    		height: 100%;
+    		z-index: -10;
+		}
+		main {
+			display: block;
+			width: 800px;
+			margin: 0 auto;
+		}
+		section {
+			display: block;
+			width: 390px;
+		}
+		#what {
+			float: left;
+		}
+		h1 {
+			font-size: 11em;
+			margin-bottom: 30px;
+		}
+		#who {
+			float: right;
+		}
+		h2 {
+			font-size: 3.5em;
+			margin-bottom: 10px;
+		}
+		hr {
+			margin: 20px 0;
+		}
+		b {
+			font-weight: bold;
+		}
+		p, span {
+			font-size: 1.1em;
+			margin-bottom: 12px;
+			line-height: 25px;
+		}
+		input {
+			width: 325px;
+			float: left;
+			height: 20px;
+			margin-top: 13px;
+		}
+		button {
+			width: 59px;
+			height: 26px;
+			margin-top: 13px;
+		}
+		a {
+			color: #FFF;
+		}
+	</style>
+</head>
+<body>
+	<div id="background"></div>
+	<main>
+	<h1>Musivation</h1><hr>
+		<section id="what">
+			<h2>What is it ?</h2><hr>
+			<p>Musivation is an android app which will try to <b>maintain your motivation</b> during <b>Running</b> or <b>Circuit training</b> (aka "HIIT").</p>
+			<p>It's like a pact you deal with it, let me explain :</p>
+			<p>Basicly, you are choosing your number of steps/minute (for running) or your number of Work, Rest, Cycles, Times (for hiit). And, when you are in action, <b>it will shutdown your music if you run above/under your steps or when you rest</b>. You are its fuel ! Admit, it would be a shame not to use energy as you strive to spend !</p>
+		</section>
+		<section id="who">
+			<h2>Who made this ?</h2><hr>
+			<p>Musivation is an app made by <a href="mailto:shuncil_redart@hotmail.com">Bleiz</a></p>
+			<p>And if you want to stay in touch :</p>
+			<form id="form" method="post">
+				<input name="mail" type="text" placeholder="E-mail me when your app is coming out, I will give it a try !" autofocus>
+				<button name="submit" type="submit" value="submit">Submit</button>
+			</form>
+			<p id="result"></p><br />
+			<p>I forgot to mention a really big thanks to <a href="https://github.com/bagilevi/android-pedometer">Bagilevi</a>
+			</p>
+			<p>However, if you want to try an alpha version here it is an <a href="Musivation.apk.zip">apk</a>, and a <a href="Musivation.zip">code</a> version</p>
+		</section>
+	</main>
+</body>
+</html>
