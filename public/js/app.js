@@ -165,7 +165,7 @@ $(document).ready(function() {
 				$(document).off( 'keydown' );
 
 				if(index == 1 && slideIndex == 1 && direction == 'right'){	// De la mainPage à detailsPage
-
+					
 					$(infoDisplayed+'Details').fadeToggle(pageSpeed);
 					$('#detailsContent').load('details.html '+infoDisplayed+'Details');
 
