@@ -1,0 +1,53 @@
+main#mainPage.slide.row.active
+	span.borderTop
+	span.borderBottom
+	figure#gallery.small-8.columns
+		img(id="arnaudImg" src="stylesheets/ARNAUD.jpg" alt="Arnaud")
+		img(id="aikuImg" src="stylesheets/aiku_l.jpg" alt="Aïku animation")
+		img(id="oldPortfolioImg" src="stylesheets/portfolioV1_l.jpg" alt="Old portfolio")
+		img(id="aikiImg" src="stylesheets/aiki_l.jpg" alt="Aïki advertising")
+		img(id="musivationImg" src="stylesheets/android_l.jpg" alt="Musivation android app")
+	#infos.small-3.columns
+		article#arnaudInfo
+			h1 Welcome
+			hr
+			p My name is Arnaud Pigné, I'm a junior and devoted Front End Developer.
+			p I like generate graphics, or animate things with a bit of code.
+			p If you are interested, you can 
+				a(href="#" data-index="1").toSlide contact me
+				| , or pursue below to see some of my works.
+			hr
+		article#aikuInfo.hide
+			h2: span Aïku
+			hr
+			p It's a borderline handmade animation about this aïku : Les lèvres mouillées du jus de pêche blanche, je ris.
+			p.hide Typography, drawing, animation, idea, all made by myself (except music). And I'm a bit proud of it ! (
+				a(href="http://stlejvil.com/portfolioV1/StomotypeMakingOf.pdf") Making Of
+				| . "Les lèvres mouillées du jus de pêche blanche, je ris."
+			hr
+		article#oldPortfolioInfo.hide
+			h2: span Portfolio
+			hr
+			p That's my first version of this Portfolio. Made during school years in AS3 with a glitch aesthetics which you can play with it.
+			p.hide Old Portfolio in AS3, with glitch aspect. You can play with it. I really like to display works using background. You can get an overview of previous work too. (
+				a(href="http://stlejvil.com/portfolioV1/psychopart/CharteGraphiqueTFA.pdf") Graphic Charter
+				| ).
+			hr
+		article#aikiInfo.hide
+			h2: span Aïki
+			hr
+			p It's an animation for Aïki pasta, totally made in AS3 script (with graphic elements).
+			p.hide I made this for a real job, for an Aïki's event. It totally animated in AS3 script. Using Flash CS5 IDE and Tweenings from Greensock.
+			hr
+		article#musivationInfo.hide
+			h2: span Musivation
+			hr
+			p It's an Android application about fitness motivation. Coming Soon on Android Market.
+			p.hide I made this application to boost myself in fitness and android development. The real difficulty is to transform a mobile device into a pedometer without using GPS to help. I'm currently testing it, but an alpha version is already available 
+				a(href="#") here
+				| .
+			hr
+		ul.hide
+			li: a(href="#detailsPage" data-index="3").bgArrow.active.toSlide
+			li: a(href="#").linkStyle.toggleGo &gt;
+			li: a(href="#").linkStyle.toggleBack.hide &lt;
