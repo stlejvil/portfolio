@@ -66,8 +66,14 @@ $(document).ready(function() {
 					case (pos > imgHeight[2].height-c) && (pos < imgHeight[3].height-c) :
 						a = 3;
 					break;
-					case (pos > imgHeight[3].height-c) :
+					case (pos > imgHeight[3].height-c) && (pos < imgHeight[4].height-c) :
 						a = 4;
+					break;
+					case (pos > imgHeight[4].height-c) && (pos < imgHeight[5].height-c) :
+						a = 5;
+					break;
+					case (pos > imgHeight[5].height-c) :
+						a = 6;
 					break;
 				}
 				if (b != a) {

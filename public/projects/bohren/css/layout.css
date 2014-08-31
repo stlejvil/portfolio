@@ -1,0 +1,293 @@
+/*CSS Layout sheet for */
+/*------------------------------------------------------------------------------*/
+/*Author: Arnaud Pigné*/
+ 
+/*URL: www.arnaudp.com*/
+ 
+/*e-mail: arnaud@arnaudp.com
+/*------------------------------------------------------------------------------*/
+/*This site uses the sticky footer technique developed by Ryan Fait*/
+/*http://ryanfait.com/resources/footer-stick-to-bottom-of-page/*/
+/*------------------------------------------------------------------------------*/
+
+
+/* DOCUMENT WIDE */
+/*------------------------------------------------------------------------------*/
+html, body {
+	height: 100%;
+	font-size: 100%;
+	font-size: 1em;
+	font-family: Verdana, Helvetica, Arial, Sans-serif;
+	background: #000;
+}
+#wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -1em; /* the bottom margin is the negative value of the footer's height */
+	
+}
+ul li {
+	color: #CDBD98;
+	padding-left: 4.75em;
+}
+.title {
+	font-size: 1.5em;
+	height: 0.5833em;
+	margin-top: 2.333em;
+	line-height: 0;
+	color: #B49257;
+	padding: 1em 0 0 1.5833em;
+}
+.date {
+	font-size: 1.25em;
+	height: 0.9em;
+	padding-top: 1em;
+}
+.text {
+	font-size: 0.875em;
+	color: #424242;
+	padding: 1.8393em 2.7143em 2.7143em 8.1429em;
+	line-height: 1.5;
+	text-align: justify;
+}
+/* WIDTH */
+
+.header, #content, .footer {
+	width: 60em;
+}
+ 
+/* CENTERING */
+
+.header, #content, .footer {
+	margin: 0 auto;
+}
+/* HEADER */
+/*------------------------------------------------------------------------------*/
+.header {
+	background: url(../images/urban_sunset_01.jpg) no-repeat;
+	position: relative;
+	height: 33.875em;
+}
+	.header h1 a {
+		background: url(../images/bohren.png) no-repeat;
+		height: 2.625em;
+		width: 42em;
+		position: absolute;
+		bottom: 2.625em;
+		right: 0;
+	}
+/* NAVIGATION */
+/*------------------------------------------------------------------------------*/
+#main_nav {
+	width: 18.1875em;
+	float: left;
+	background: #000;
+}
+	#main_nav li {
+		text-indent: -624.9375em;
+	}
+		#main_nav li a {
+			display: block;
+			height: 2.375em;
+			width: 18.1875em;
+			clear: both;
+			float: right;
+		}
+    	#main_nav #gore_story a {
+    	    background: url(../images/gore_story.png) no-repeat;
+    	    width: 13.9375em;
+    	    float: right;
+    	}
+    		#main_nav #gore_story a:hover {
+    			background: url(../images/gore_story-h.png) no-repeat;
+    		}
+    	#main_nav #tour a {
+    	    background: url(../images/tour.png) no-repeat;
+    	    width: 5.5625em;
+    	    float: right;
+    	}
+    		#main_nav #tour a:hover {
+    	    	background: url(../images/tour-h.png) no-repeat;
+    	    }
+    	#main_nav #disgoregraphy a {
+    	    background: url(../images/disgoregraphy.png) no-repeat;
+    	    width: 17.9375em;
+    	    float: right;
+    	}
+    		#main_nav #disgoregraphy a:hover {
+				background: url(../images/disgoregraphy-h.png) no-repeat;
+			}
+    	#main_nav #merchandise a {
+    	    background: url(../images/merchandise.png) no-repeat;
+    	    width: 15.625em;
+    	    float: right;
+    	}
+    		#main_nav #merchandise a:hover {
+				background: url(../images/merchandise-h.png) no-repeat;
+			}
+    	#main_nav #downloads a {
+    	    background: url(../images/downloads.png) no-repeat;
+    	    width: 14.25em;
+    	}
+    		#main_nav #downloads a:hover {
+				background: url(../images/downloads-h.png) no-repeat;
+			}
+    	#main_nav #contact a {
+    	    background: url(../images/contact.png) no-repeat;
+    	    width: 10.1875em;
+    	}
+    		#main_nav #contact a:hover {
+				background: url(../images/contact-h.png) no-repeat;
+			}
+    	#main_nav #links a {
+    	    background: url(../images/links.png) no-repeat;
+    		width: 6.75em;
+    	}
+    		#main_nav #links a:hover {
+				background: url(../images/links-h.png) no-repeat;
+			}
+/* CONTENT */
+/*------------------------------------------------------------------------------*/
+.maincontent {
+	float: right;
+	width: 41.8125em;
+	background: #000;
+}
+
+/* HOME */
+.home #quote {
+	font-size: 1.125em;
+	height: 2.111em;
+	margin-top: 3.111em;
+	text-align: center;
+	color: #282828;
+}
+/* GORE_STORY */
+.header.bio {
+	background: url(../images/urban_sunset_02.jpg)
+}
+#main_nav #gore_story.here_main a {
+    background: url(../images/gore_story-h.png) no-repeat;
+}
+	.gore_story img {
+		display: block;
+		border: 0.0625em solid #251f17;
+		margin: 2.3750em 0 0 2.3750em;
+	}
+	.gore_story #bottom {
+		margin-bottom: 0;
+	}
+	.gore_story ul .text {
+		font-size: 0.875em;
+		color: #424242;
+		padding: 1.8393em 2.7143em 0 8.1429em;
+		line-height: 1.5;
+		text-align: justify;
+	}
+/* TOUR */
+.header.tour {
+	background: url(../images/urban_sunset_03.jpg)
+}
+#main_nav #tour.here_main a {
+    background: url(../images/tour-h.png) no-repeat;
+}
+/* DISGOREGRAPHY */
+.header.disco {
+	background: url(../images/urban_sunset_04.jpg)
+}
+#main_nav #disgoregraphy.here_main a {
+    background: url(../images/disgoregraphy-h.png) no-repeat;
+}
+.disgoregraphy ul .date {
+	padding-bottom: 0.5em;
+}
+.disgoregraphy ul .tracklist {
+	font-size: 0.75em;
+	line-height: 0;
+	padding: 1em 3.1667em 0 11em;
+	color: #fff;
+}
+	.disgoregraphy ul .tracklist.last {
+	padding-bottom: 1em;
+}
+.disgoregraphy ul .text {
+	font-size: 0.75em;
+	padding: 0 3.1667em 0 9.5em;
+}
+	.disgoregraphy ul .text.type {
+		padding: 1em 3.1667em 0.5em 9.5em;
+	}
+	.disgoregraphy ul .text.from {
+		padding: 0.5em 3.1667em 0.5em 9.5em;
+	}
+	.disgoregraphy ul li a {
+		text-decoration: none;
+		color: #c0a16e;
+	}
+	.disgoregraphy ul li a:hover {
+		color: #986f30;
+	}
+/* MERCHANDISE */
+.header.merch {
+	background: url(../images/urban_sunset_05.jpg)
+}
+#main_nav #merchandise.here_main a {
+    background: url(../images/merchandise-h.png) no-repeat;
+}
+/* DOWNLOADS */
+.header.down {
+	background: url(../images/urban_sunset_06.jpg)
+}
+#main_nav #downloads.here_main a {
+    background: url(../images/downloads-h.png) no-repeat;
+}
+/* CONTACT */
+.header.cont {
+	background: url(../images/urban_sunset_07.jpg)
+}
+#main_nav #contact.here_main a {
+    background: url(../images/contact-h.png) no-repeat;
+}
+/* LINKS */
+.header.links {
+	background: url(../images/urban_sunset_08.jpg)
+}
+#main_nav #links.here_main a {
+    background: url(../images/links-h.png) no-repeat;
+}
+/* PLAYER */
+/*------------------------------------------------------------------------------*/
+#player {
+	display: block;
+	border: 0.0625em solid #251f17;
+	padding: 1em;
+	float: right;
+	margin-top: 2.625em;
+}
+	#player p {
+		color: #262626;
+		text-align: center;
+		padding: 1em;
+	}
+		#player p a {
+			text-decoration: none;
+			color: #424242;
+		}
+/*------------------------------------------------------------------------------*/
+.footer {
+	height: 1em; /* .footer must be the same height as .push */
+	text-align: right;
+	padding: 2.7143em;
+	margin-top: 2.375em;
+}
+	.footer p a {
+		text-decoration: none;
+		color: #262626;
+	}
+/* STICKY FOOTER CODE */
+/*------------------------------------------------------------------------------*/
+.footer, .push {
+	height: 1em; /* .push must be the same height as .footer */
+	clear: both;
+}
