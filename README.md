@@ -1,3 +1,5 @@
-# The OpenShift `nodejs` cartridge documentation can be found at:
+# I'm **Stlejvil** and this is my [portfolio](http://www.stlejvil.eu)
 
-http://openshift.github.io/documentation/oo_cartridge_guide.html#nodejs
+I've used 'nodeJS' for server part and 'jade' for HTML templating.
+
+Client side, there is a grid from 'Foundation' (I'm working on mobile part soon), 'fullPage.js' and *obviously* some 'jQuery'.
