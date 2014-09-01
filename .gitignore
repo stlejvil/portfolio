@@ -3,4 +3,5 @@
 /public/backup/*
 /public/stylesheets/dossier sans titre
 *.DS_Store
+/.openshift/*
 /openshiftBackup/*
