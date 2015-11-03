@@ -1,18 +1,18 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
-  "description": "Stlejvil's portfolio",
+  "description": "Bleiz's portfolio",
   "keywords": [
     "OpenShift",
     "Node.js",
     "Express"
   ],
   "author": {
-    "name": "Stlejvil",
+    "name": "Bleiz",
     "email": "arnaud.pigne@gmail.com",
-    "url": "http://www.stlejvil.eu"
+    "url": "http://www.bleiz.be"
   },
-  "homepage": "http://www.stlejvil.eu",
+  "homepage": "http://www.bleiz.be",
   "repository": {
     "type": "git",
     "url": "https://github.com/stlejvil"
