@@ -1,4 +1,4 @@
-# I'm **Bleiz** and this is my [portfolio](http://www.bleiz.be)
+# I'm **Bleiz** and this is my [portfolio](http://bleiz.be)
 
 I've used 'nodeJS' for server part and 'jade' for HTML templating.
 
