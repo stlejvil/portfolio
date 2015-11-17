@@ -55,25 +55,46 @@ $(document).ready(function() {
 			$('.fp-scrollable').slimScroll().on('slimscrolling', function currentScroll(e, pos){
 				switch (true) {
 					case (pos < imgHeight[0].height-c) :
-						a = 0;
+						a = 0; // Accueil
 					break;
 					case (pos > imgHeight[0].height-c) && (pos < imgHeight[1].height-c) :
-						a = 1;
+						a = 1; // Pannopaille
 					break;
 					case (pos > imgHeight[1].height-c) && (pos < imgHeight[2].height-c) :
-						a = 2;
+						a = 2; // LME - Static
 					break;
 					case (pos > imgHeight[2].height-c) && (pos < imgHeight[3].height-c) :
-						a = 3;
+						a = 3; // LME - Shop
 					break;
 					case (pos > imgHeight[3].height-c) && (pos < imgHeight[4].height-c) :
-						a = 4;
+						a = 4; // LME - Newsletters
 					break;
 					case (pos > imgHeight[4].height-c) && (pos < imgHeight[5].height-c) :
-						a = 5;
+						a = 5; // LME - Concours
 					break;
-					case (pos > imgHeight[5].height-c) :
-						a = 6;
+					case (pos > imgHeight[5].height-c) && (pos < imgHeight[6].height-c) :
+						a = 6; // LME - Truck
+					break;
+					case (pos > imgHeight[6].height-c) && (pos < imgHeight[7].height-c) :
+						a = 7; // LME - Banners
+					break;
+					case (pos > imgHeight[7].height-c) && (pos < imgHeight[8].height-c) :
+						a = 8; // Aïku
+					break;
+					case (pos > imgHeight[8].height-c) && (pos < imgHeight[9].height-c) :
+						a = 9; // OldPortfolio
+					break;
+					case (pos > imgHeight[9].height-c) && (pos < imgHeight[10].height-c) :
+						a = 10; // Aïki
+					break;
+					case (pos > imgHeight[10].height-c) && (pos < imgHeight[11].height-c) :
+						a = 11; // Musivation
+					break;
+					case (pos > imgHeight[11].height-c) && (pos < imgHeight[12].height-c) :
+						a = 12; // Bohren
+					break;
+					case (pos > imgHeight[12].height-c) :
+						a = 13; // Whourkr
 					break;
 				}
 				if (b != a) {
@@ -227,7 +248,7 @@ function borders() {
 
 	var windowHeight = $(window).height();				// Taille de l'écran
 
-	//Calcule du borderBottom
+	// Calcul du borderBottom
 	if ( windowHeight > arnaudImgHeight + parseInt(borderSize) * 2 ) {	// Si l'image ne dépasse pas l'écran
 		borderBottom = windowHeight - imgBottom + 1; 					// La bordure ira juste dessous l'image (+1 = Chrome Fix)
 		borderBottom += 'px';
