@@ -70,7 +70,7 @@ $(document).ready(function() {
 						a = 4; // LME - Newsletters
 					break;
 					case (pos > imgHeight[4].height-c) && (pos < imgHeight[5].height-c) :
-						a = 5; // LME - Concours
+						a = 5; // LME - Contest
 					break;
 					case (pos > imgHeight[5].height-c) && (pos < imgHeight[6].height-c) :
 						a = 6; // LME - Truck
