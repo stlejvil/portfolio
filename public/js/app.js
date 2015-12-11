@@ -156,13 +156,14 @@ $(document).ready(function() {
 				if(index == 1 && slideIndex == 1) {		// Au chargement de la mainPage
 					$('.fp-scrollable').slimScroll().on('slimscrolling');
 					$('.slimScrollBar').show();
-	            	$('#infos').css({'position' : 'fixed'});
-	            	// $('#detailsContent').empty();
-	            };
+					$('#infos').css({'position' : 'fixed'});
+					// $('#detailsContent').empty();
+					$('#contactIcon').data('index', '1');
+				};
 
-				// if(index == 1 && slideIndex == 0) {		// Au chargement de la contactPage
-
-				// };
+				if(index == 1 && slideIndex == 0) {		// Au chargement de la contactPage
+					$('#contactIcon').data('index', '2');
+				};
 
 				if(index == 1 && slideIndex == 2) {	// Au chargement de la detailsPage
 					slickDetails();
@@ -204,25 +205,25 @@ $(document).ready(function() {
 					$('#infos').delay(0).animate({'right': infosM + galleryW }, pageSpeed, 'easeInQuart', function() {$('#infos ul li .bgArrow').data('index', '2');});
 					$('#infos article h2 span').delay(0).animate({'margin-left': 0 }, pageSpeed, 'easeInQuart');
 					
-	            };
+				};
 
-	            if(index == 1 && slideIndex == 2 && direction == 'left') {	// De detailsPage à la mainPage
+				if(index == 1 && slideIndex == 2 && direction == 'left') {	// De detailsPage à la mainPage
 
-	            	$(infoDisplayed+'Details').fadeToggle(pageSpeed);
+					$(infoDisplayed+'Details').fadeToggle(pageSpeed);
 					$(infoDisplayed+'Info').find('p').fadeToggle(0);
 
-	            	$('#infos ul li .toggleGo').toggle(0);
+					$('#infos ul li .toggleGo').toggle(0);
 					$('#infos ul li .toggleBack').toggle(0);
 					$('#infos').delay(0).animate({'right': 0 }, pageSpeed, 'easeInQuart', function() {$('#infos ul li .bgArrow').data('index', '3');});
 					$('#infos article h2 span').delay(0).animate({'margin-left': h2M }, pageSpeed, 'easeInQuart');
-	            };
+				};
 
-	            if(index == 1 && slideIndex == 1 && direction == 'left') {	// De la mainPage à contactPage
+				if(index == 1 && slideIndex == 1 && direction == 'left') {	// De la mainPage à contactPage
 
-	            	$('.slimScrollBar').hide();
-	            	$('#infos').css({'position' : 'absolute'});
-	            	$('#contactContent').fadeToggle(pageSpeed);
-	            };
+					$('.slimScrollBar').hide();
+					$('#infos').css({'position' : 'absolute'});
+					$('#contactContent').fadeToggle(pageSpeed);
+				};
 
 				if(index == 1 && slideIndex == 0 && direction == 'right') {	// De contactPage à la mainPage
 					$('#contactContent').fadeToggle(pageSpeed);
