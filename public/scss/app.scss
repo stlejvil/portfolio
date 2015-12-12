@@ -111,11 +111,12 @@ video {
 	}
 	#contactIcon {
 		position: fixed;
-		top: ($border)-32px;
-		left: 0;
+		top: ($border/2)-16px;
+		left: 20px;
 		width: 32px;
 		height: 32px;
-		background-color: #000;
+		background-image: url(email.svg);
+		background-size: 32px 32px;
 		z-index: 200;
 	}
 	#gallery {
@@ -204,7 +205,7 @@ video {
 	position: absolute;
 }
 #detailsPage #detailsContent .slick-list {
-	margin-top: -28%;
+	margin-top: -33%;
 }
 .slimScrollBar{
 	width: 7px !important;
