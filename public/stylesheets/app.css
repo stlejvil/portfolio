@@ -2429,7 +2429,7 @@ video {
 
 /* line 112, ../scss/app.scss */
 #contactIcon {
-  position: fixed;
+  position: absolute;
   top: 24px;
   left: 20px;
   width: 32px;
@@ -2451,16 +2451,17 @@ video {
   padding-top: 80px;
   margin-right: 80px;
   position: fixed;
-  right: 0;
+  width: 25vw;
+  right: 100vw;
   z-index: 100;
 }
 
-/* line 138, ../scss/app.scss */
+/* line 139, ../scss/app.scss */
 #infos article h1 {
   font-size: 3em;
 }
 
-/* line 141, ../scss/app.scss */
+/* line 142, ../scss/app.scss */
 #infos article h2 {
   display: block;
   color: #333;
@@ -2469,44 +2470,49 @@ video {
   margin-bottom: -10px;
 }
 
-/* line 148, ../scss/app.scss */
+/* line 149, ../scss/app.scss */
 #infos article h2 span {
   text-transform: uppercase;
   font-size: 1.8em;
   margin-left: -544px;
 }
 
-/* line 154, ../scss/app.scss */
+/* line 155, ../scss/app.scss */
 #infos article p {
   line-height: 1.8em;
   font-size: .9rem;
 }
 
-/* line 158, ../scss/app.scss */
+/* line 159, ../scss/app.scss */
 #infos article strong {
   font-size: 1rem;
   background-color: yellow;
 }
 
-/* line 162, ../scss/app.scss */
-#infos ul {
+/* line 163, ../scss/app.scss */
+#infos ul, #contactContent ul {
   margin-left: 45px;
 }
 
-/* line 165, ../scss/app.scss */
-#infos ul li {
+/* line 166, ../scss/app.scss */
+#contactContent ul {
+  float: right;
+}
+
+/* line 169, ../scss/app.scss */
+#infos ul li, #contactContent ul li {
   list-style: none;
   float: left;
 }
 
-/* line 169, ../scss/app.scss */
-#infos ul li a {
+/* line 173, ../scss/app.scss */
+#infos ul li a, #contactContent ul li a {
   margin-left: -35px;
   color: #bbb;
 }
 
-/* line 173, ../scss/app.scss */
-#infos ul li .bgArrow {
+/* line 177, ../scss/app.scss */
+#infos ul li .bgArrow, #contactContent ul li .bgArrow {
   display: block;
   width: 50px;
   height: 50px;
@@ -2520,8 +2526,8 @@ video {
   -moz-transition: all .3s linear;
 }
 
-/* line 186, ../scss/app.scss */
-#infos ul li .bgArrow:hover {
+/* line 190, ../scss/app.scss */
+#infos ul li .bgArrow:hover, #contactContent ul li .bgArrow:hover {
   border-radius: 0%;
   cursor: pointer;
   transform: rotate(-45deg);
@@ -2529,7 +2535,7 @@ video {
   -moz-transform: rotate(-45deg);
 }
 
-/* line 194, ../scss/app.scss */
+/* line 198, ../scss/app.scss */
 #detailsPage #detailsContent {
   padding: 0;
   padding-left: 15px;
@@ -2538,19 +2544,19 @@ video {
   float: right;
 }
 
-/* line 202, ../scss/app.scss */
+/* line 206, ../scss/app.scss */
 #detailsPage #detailsContent div.single-item {
   width: 100%;
   height: 100%;
   position: absolute;
 }
 
-/* line 207, ../scss/app.scss */
+/* line 211, ../scss/app.scss */
 #detailsPage #detailsContent .slick-list {
   margin-top: -33%;
 }
 
-/* line 210, ../scss/app.scss */
+/* line 214, ../scss/app.scss */
 .slimScrollBar {
   width: 7px !important;
   opacity: .5 !important;

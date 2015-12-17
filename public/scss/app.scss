@@ -110,7 +110,7 @@ video {
 		z-index: 200;
 	}
 	#contactIcon {
-		position: fixed;
+		position: absolute;
 		top: ($border/2)-16px;
 		left: 20px;
 		width: 32px;
@@ -132,7 +132,8 @@ video {
 		padding-top: $border;
 		margin-right: $border;
 		position: fixed;
-		right: 0;
+		width: 25vw;
+		right: 100vw;
 		z-index: 100;
 	}
 		#infos article h1 {
@@ -159,18 +160,21 @@ video {
 			font-size: 1rem;
 			background-color: yellow;
 		}
-		#infos ul {
+		#infos ul, #contactContent ul {
 			margin-left: 45px; //centrer le bouton
 		}
-			#infos ul li {
+		#contactContent ul {
+			float: right;
+		}
+			#infos ul li, #contactContent ul li {
 				list-style: none;
 				float: left;
 			}
-				#infos ul li a {
+				#infos ul li a, #contactContent ul li a {
 					margin-left: -35px;
 					color: #bbb;
 				}
-				#infos ul li .bgArrow {
+				#infos ul li .bgArrow, #contactContent ul li .bgArrow {
 					display: block;
 					width: 50px;
 					height: 50px;
@@ -183,7 +187,7 @@ video {
 					-webkit-transition: all .3s linear;
 					-moz-transition: all .3s linear;
 				}
-				#infos ul li .bgArrow:hover {
+				#infos ul li .bgArrow:hover, #contactContent ul li .bgArrow:hover {
 					border-radius: 0%;
 					cursor: pointer;
 					transform: rotate(-45deg);

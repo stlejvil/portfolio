@@ -15,16 +15,23 @@ var afterSlideLoadBug = 0;	// To prevent afterSlideLoad to load twice
 var imgHeight = [];
 var lasturl = "";
 var imgDisplayed = 0;
+var infosR = 0;
 
 $(document).ready(function() {
 
 	h2M = $('#infos article h2 span').css('margin-left');	// stock de la valeur du margin-left des h2
 
 	$('#fullpage').fullpage({
+		// Navigation
 		'anchors': ['home'],
-		'scrollOverflow': true,
+		// Scrolling
 		'loopHorizontal': false,
-		'setKeyboardScrolling': true,
+		'scrollOverflow': true,
+		// Design
+		'controlArrows': false,
+		// Accessibility
+		'keyboardScrolling': true,
+		// Events
 		'afterRender': function() {
 			// console.log('afterRender');
 
@@ -97,13 +104,14 @@ $(document).ready(function() {
 						a = 13; // Whourkr
 					break;
 				}
+				// console.log(a);
 				if (b != a) {
 					b = a;
 
 					$.each( imgHeight, function(i) {
 						$(imgHeight[i].id).hide();
 						$('#infos ul').hide();
-					})
+					});
 
 					imgDisplayed = b;
 
@@ -156,17 +164,34 @@ $(document).ready(function() {
 				if(index == 1 && slideIndex == 1) {		// Au chargement de la mainPage
 					$('.fp-scrollable').slimScroll().on('slimscrolling');
 					$('.slimScrollBar').show();
-					$('#infos').css({'position' : 'fixed'});
+					// $('#infos').css({'width' : '25vw'});
 					// $('#detailsContent').empty();
-					$('#contactIcon').data('index', '1');
+					$('#contactIcon').off('click').click(function() {
+						$.fn.fullpage.moveSlideLeft();
+					});
+					$('#arnaudInfo p a').off('click').click(function() {
+						$.fn.fullpage.moveSlideLeft();
+					});
+					$('.bgArrow').off('click').click(function() {
+						$.fn.fullpage.moveSlideRight();
+					})
 				};
 
 				if(index == 1 && slideIndex == 0) {		// Au chargement de la contactPage
-					$('#contactIcon').data('index', '2');
+					
+					$('#contactIcon').off('click').click(function() {
+						$.fn.fullpage.moveSlideRight();
+					});
 				};
 
 				if(index == 1 && slideIndex == 2) {	// Au chargement de la detailsPage
-					slickDetails();
+					// $('#infos').css({'position' : 'fixed'});
+					// slickDetails();
+					$('.single-item').slick();
+					// $('.bgArrow').off('click');
+					$('.bgArrow').off('click').click(function() {
+						$.fn.fullpage.moveSlideLeft();
+					})
 				};
 			};
 		},
@@ -174,17 +199,18 @@ $(document).ready(function() {
 
 			// console.log('onSlideLeave');
 
-			if ( $('.fp-controlArrow').css('border-width') != '0px') {
-				$('.fp-controlArrow').css({'border-width' : 0});
-				$('.fp-controlArrow').hide();
-				// console.log('arrows is hidden');
-			};
+			// if ( $('.fp-controlArrow').css('border-width') != '0px') {
+			// 	$('.fp-controlArrow').css({'border-width' : 0});
+			// 	$('.fp-controlArrow').hide();
+			// 	// console.log('arrows is hidden');
+			// };
 
 			if (afterSlideLoadBug > 0) {
 
 				var windowW = $(window).width();
 				var infosW = $('#infos').width();
 				var galleryW = $('#gallery').width();
+				
 				var infosM = parseInt($('#infos').css('margin-right'));
 
 				var infoDisplayed = '#';
@@ -196,15 +222,18 @@ $(document).ready(function() {
 					
 					$(infoDisplayed+'Details').fadeToggle(pageSpeed);
 					$('#detailsContent').load('details.html '+infoDisplayed+'Details');
-					$('#contactIcon').css({'position' : 'absolute'});
-
+					// $('#contactIcon').css({'position' : 'absolute'});
+					infosR = $('#infos').css('right');
+					// var infoVW = 25/windowW;
+					// console.log(infosR);
+					// $('#infos').css({'right': infosM + galleryW});
 					$(infoDisplayed+'Info').find('p').fadeToggle(0);
-
+					var infosGalleryPos = infosM + galleryW
 					$('.slimScrollBar').hide();
 					$('#infos ul li .toggleGo').toggle(0);
 					$('#infos ul li .toggleBack').toggle(0);
-					$('#infos').delay(0).animate({'right': infosM + galleryW }, pageSpeed, 'easeInQuart', function() {$('#infos ul li .bgArrow').data('index', '2');});
-					$('#infos article h2 span').delay(0).animate({'margin-left': 0 }, pageSpeed, 'easeInQuart');
+					$('#infos').delay(0).animate({'right': infosGalleryPos }, pageSpeed, 'swing', function() {$('#infos ul li .bgArrow').data('index', '2');});
+					$('#infos article h2 span').delay(0).animate({'margin-left': 0 }, pageSpeed, 'swing');
 					
 				};
 
@@ -213,21 +242,28 @@ $(document).ready(function() {
 					$(infoDisplayed+'Details').fadeToggle(pageSpeed);
 					$(infoDisplayed+'Info').find('p').fadeToggle(0);
 
+					// var infosR = $('#infos').css('right');
+					// var infoVW = 25/windowW;
+					// console.log(infosR);
+					// $('#infos').css({'right' : infosM*2 + galleryW });
 					$('#infos ul li .toggleGo').toggle(0);
 					$('#infos ul li .toggleBack').toggle(0);
-					$('#infos').delay(0).animate({'right': 0 }, pageSpeed, 'easeInQuart', function() {$('#infos ul li .bgArrow').data('index', '3');$('#contactIcon').css({'position' : 'fixed'});});
-					$('#infos article h2 span').delay(0).animate({'margin-left': h2M }, pageSpeed, 'easeInQuart');
+					$('#infos').delay(0).animate({'right': infosR }, pageSpeed, 'swing', function() {$('#infos ul li .bgArrow').data('index', '3'); $('#contactIcon').css({'position' : 'absolute'});});
+					$('#infos article h2 span').delay(0).animate({'margin-left': h2M }, pageSpeed, 'swing');
 				};
 
 				if(index == 1 && slideIndex == 1 && direction == 'left') {	// De la mainPage à contactPage
 
-					$('.slimScrollBar').hide();
-					$('#infos').css({'position' : 'absolute'});
+					// $('.slimScrollBar').hide();
+					// $('#infos').css({'position' : 'absolute'});
 					$('#contactContent').fadeToggle(pageSpeed);
+					$('#contactIcon').css({'position' : 'fixed'});
+
 				};
 
 				if(index == 1 && slideIndex == 0 && direction == 'right') {	// De contactPage à la mainPage
 					$('#contactContent').fadeToggle(pageSpeed);
+					$('#contactIcon').css({'position' : 'absolute'});
 				};
 			};
 		},
@@ -308,7 +344,7 @@ function keysAllowed() {
 	});
 };
 
-function slickDetails() {
-	$('.single-item').slick();
-	// console.log($('.single-item'));
-};
+// function slickDetails() {
+// 	$('.single-item').slick();
+// 	// console.log($('.single-item'));
+// };
