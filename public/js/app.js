@@ -225,8 +225,6 @@ $(document).ready(function() {
 					var detailsFile = infoDisplayed.substring(1);
 						detailsFile += 'Details.html';
 					$('#detailsContent').load('details/'+detailsFile+' '+infoDisplayed+'Details');
-					console.log(detailsFile);
-					console.log(infoDisplayed);
 					// $('#contactIcon').css({'position' : 'absolute'});
 					infosR = $('#infos').css('right');
 					// var infoVW = 25/windowW;
