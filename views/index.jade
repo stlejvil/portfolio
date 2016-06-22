@@ -1,8 +1,17 @@
 extends ./layout.jade
 
 block content
+	//- span.borderTop
+	//- span.borderBottom
 	#fullpage
 		.section(data-anchor='home')
 			include contact
 			include main
-			include details
+			//- include details
+		include projects
+	a#contactIcon(href="#home/contact")
+		i.fa.fa-user
+	a#github(href="https://github.com/stlejvil/portfolio" rel="nofollow")
+		i.fa.fa-github
+	//- span.borderTop
+	//- span.borderBottom

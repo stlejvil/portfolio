@@ -2355,187 +2355,121 @@ blockquote p {
   font-family: 'Gotham-Light';
   src: url("Gotham-Light.otf") format("truetype");
 }
-/* line 57, ../scss/app.scss */
+/* line 58, ../scss/app.scss */
 body {
   background-color: #efefed;
   font-family: "Gotham-Light", Helvetica, Sans-serif;
 }
 
-/* line 61, ../scss/app.scss */
+/* line 62, ../scss/app.scss */
+.fp-enabled body {
+  padding: 80px;
+}
+@media only screen and (max-width: 40em) {
+  /* line 62, ../scss/app.scss */
+  .fp-enabled body {
+    padding: 0px;
+  }
+}
+
+/* line 69, ../scss/app.scss */
 h1, h2 {
   font-family: "ITCAvantGardeStd-Bold", Helvetica, Sans-serif;
 }
 
-/* line 64, ../scss/app.scss */
+/* line 72, ../scss/app.scss */
 img {
   width: 100%;
 }
 
-/* line 68, ../scss/app.scss */
+/* line 76, ../scss/app.scss */
 video {
   width: 100%;
   height: auto;
 }
 
-/* line 73, ../scss/app.scss */
+/* line 81, ../scss/app.scss */
 .row {
   margin: 0;
   max-width: initial;
 }
 
-/* line 78, ../scss/app.scss */
+/* line 86, ../scss/app.scss */
 .borderTop, .borderBottom {
   display: block;
   width: 100%;
-  top: 0;
   position: absolute;
-  border-bottom: 80px solid #efefed;
-  z-index: 1;
+  height: 80px;
+  background-color: #efefed;
 }
 
-/* line 87, ../scss/app.scss */
+/* line 94, ../scss/app.scss */
+.borderTop {
+  top: 0;
+}
+
+/* line 98, ../scss/app.scss */
 .borderBottom {
   bottom: 0;
 }
 
-/* line 91, ../scss/app.scss */
+/* line 102, ../scss/app.scss */
 .linkStyle {
   font-size: 2em;
-  color: black;
+  color: #bbb;
   text-decoration: none;
+  background: none;
+  border: none;
+  margin-top: 2px;
 }
 
-/* line 96, ../scss/app.scss */
+/* line 110, ../scss/app.scss */
+.linkStyle.toggleGo {
+  margin-left: -39px;
+}
+
+/* line 113, ../scss/app.scss */
+.linkStyle.toggleBack {
+  margin-left: -41px;
+}
+
+/* line 116, ../scss/app.scss */
 #contactContent p {
   line-height: 2em;
 }
 
-/* line 99, ../scss/app.scss */
-#mainPage {
-  overflow: scroll;
-}
-
-/* line 102, ../scss/app.scss */
-#github {
-  position: absolute;
-  bottom: 20px;
-  right: 80px;
-  width: 32px;
-  height: 32px;
-  background-image: url(github.svg);
-  background-size: 32px 32px;
-  z-index: 200;
-}
-
-/* line 112, ../scss/app.scss */
-#contactIcon {
-  position: absolute;
-  top: 24px;
-  left: 20px;
-  width: 32px;
-  height: 32px;
-  background-image: url(email.svg);
-  background-size: 32px 32px;
-  z-index: 200;
-}
-
 /* line 122, ../scss/app.scss */
-#gallery {
-  margin: 0;
-  padding-top: 80px;
-  padding-left: 80px;
+#github, #contactIcon {
+  position: absolute;
+  bottom: 6px;
+  right: 80px;
+  font-family: font-awesome;
+  font-size: 38px;
+  z-index: 200;
+  color: #000;
 }
 
-/* line 131, ../scss/app.scss */
-#infos {
-  padding-top: 80px;
-  margin-right: 80px;
-  position: fixed;
-  width: 25vw;
-  right: 100vw;
-  z-index: 100;
-}
-
-/* line 139, ../scss/app.scss */
-#infos article h1 {
-  font-size: 3em;
-}
-
-/* line 142, ../scss/app.scss */
-#infos article h2 {
-  display: block;
-  color: #333;
-  font-size: 2em;
-  margin-top: -33px;
-  margin-bottom: -10px;
-}
-
-/* line 149, ../scss/app.scss */
-#infos article h2 span {
-  text-transform: uppercase;
-  font-size: 1.8em;
-  margin-left: -544px;
-}
-
-/* line 155, ../scss/app.scss */
-#infos article p {
-  line-height: 1.8em;
-  font-size: .9rem;
-}
-
-/* line 159, ../scss/app.scss */
-#infos article strong {
-  font-size: 1rem;
-  background-color: yellow;
-}
-
-/* line 163, ../scss/app.scss */
-#infos ul, #contactContent ul {
-  margin-left: 45px;
-}
-
-/* line 166, ../scss/app.scss */
-#contactContent ul {
-  float: right;
-}
-
-/* line 169, ../scss/app.scss */
-#infos ul li, #contactContent ul li {
-  list-style: none;
-  float: left;
-}
-
-/* line 173, ../scss/app.scss */
-#infos ul li a, #contactContent ul li a {
-  margin-left: -35px;
-  color: #bbb;
-}
-
-/* line 177, ../scss/app.scss */
-#infos ul li .bgArrow, #contactContent ul li .bgArrow {
-  display: block;
-  width: 50px;
-  height: 50px;
-  border: solid #c6c6c6 4px;
+/* line 135, ../scss/app.scss */
+#contactIcon {
+  width: 32px;
+  height: 32px;
+  bottom: 20px;
+  right: 128px;
   border-radius: 50%;
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  transition: all .3s linear;
-  -webkit-transition: all .3s linear;
-  -moz-transition: all .3s linear;
-}
-
-/* line 190, ../scss/app.scss */
-#infos ul li .bgArrow:hover, #contactContent ul li .bgArrow:hover {
-  border-radius: 0%;
+  background-size: 32px 32px;
+  background-color: #000;
   cursor: pointer;
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
 }
 
-/* line 198, ../scss/app.scss */
+/* line 146, ../scss/app.scss */
+#contactIcon i {
+  color: #efefed;
+  font-size: 30px;
+  position: absolute;
+  padding: 4px 0 0 4px;
+}
+
+/* line 153, ../scss/app.scss */
 #detailsPage #detailsContent {
   padding: 0;
   padding-left: 15px;
@@ -2544,20 +2478,175 @@ video {
   float: right;
 }
 
-/* line 206, ../scss/app.scss */
+/* line 161, ../scss/app.scss */
 #detailsPage #detailsContent div.single-item {
   width: 100%;
   height: 100%;
   position: absolute;
 }
 
-/* line 211, ../scss/app.scss */
-#detailsPage #detailsContent .slick-list {
-  margin-top: -33%;
+/* line 167, ../scss/app.scss */
+.slick-prev:before, .slick-next:before {
+  color: #c6c6c6;
 }
 
-/* line 214, ../scss/app.scss */
-.slimScrollBar {
-  width: 7px !important;
-  opacity: .5 !important;
+/* line 171, ../scss/app.scss */
+#fullpage .section figure img {
+  padding: 0;
+}
+
+/* line 175, ../scss/app.scss */
+#contactPage .goForward {
+  float: right;
+}
+
+/* line 179, ../scss/app.scss */
+.projectCover, .projectGallery {
+  margin-top: 25px;
+}
+
+/* line 183, ../scss/app.scss */
+.projectAbstract {
+  position: fixed;
+  opacity: 0;
+  top: 80px;
+  right: 80px;
+  z-index: -10;
+  transition: right 0.6s ease, opacity 0.6s ease-out;
+}
+@media only screen and (max-width: 40em) {
+  /* line 183, ../scss/app.scss */
+  .projectAbstract {
+    top: 35vh;
+    right: 0;
+  }
+}
+
+/* line 197, ../scss/app.scss */
+.projectAbstract.detailed {
+  right: 66.7vw;
+}
+
+/* line 200, ../scss/app.scss */
+.projectAbstract.active {
+  opacity: 1;
+  z-index: 10;
+}
+
+/* line 204, ../scss/app.scss */
+.projectAbstract .goForward {
+  opacity: 1;
+  float: right;
+  transition: opacity 0.6s ease-out;
+}
+
+/* line 210, ../scss/app.scss */
+.projectAbstract.detailed .goForward {
+  opacity: 0;
+}
+
+/* line 216, ../scss/app.scss */
+.projectAbstract h2 > span {
+  visibility: hidden;
+  white-space: nowrap;
+}
+
+/* line 221, ../scss/app.scss */
+.projectAbstract strong {
+  font-size: 1rem;
+  background-color: yellow;
+}
+
+/* line 230, ../scss/app.scss */
+.projectDetails h2, .projectAbstract h2 {
+  display: block;
+  color: #333;
+  margin-top: -12px;
+}
+
+/* line 238, ../scss/app.scss */
+.projectDetails h2 span, .projectAbstract h2 span {
+  font-size: 1.6em;
+}
+@media only screen and (max-width: 40em) {
+  /* line 238, ../scss/app.scss */
+  .projectDetails h2 span, .projectAbstract h2 span {
+    font-size: 1.2em;
+  }
+}
+
+/* line 245, ../scss/app.scss */
+.projectDetails {
+  position: absolute;
+  z-index: 20;
+}
+@media only screen and (max-width: 40em) {
+  /* line 245, ../scss/app.scss */
+  .projectDetails {
+    top: 50vh;
+    z-index: 10;
+  }
+}
+
+/* line 258, ../scss/app.scss */
+.projectDetails h2 span {
+  margin-left: -80vw;
+  transition: margin-left 0.6s ease-in-out;
+}
+@media only screen and (max-width: 40em) {
+  /* line 258, ../scss/app.scss */
+  .projectDetails h2 span {
+    margin-left: -100vw;
+  }
+}
+
+/* line 272, ../scss/app.scss */
+.projectDetails.detailed h2 span {
+  margin-left: 0vw;
+}
+
+/* line 276, ../scss/app.scss */
+.projectAbstract p, .projectAbstract hr {
+  opacity: 1;
+  transition: opacity 0.6s ease-out;
+}
+
+/* line 280, ../scss/app.scss */
+.projectAbstract.detailed p, .projectAbstract.detailed hr {
+  opacity: 0;
+  transition: opacity 0.6s ease-out;
+}
+
+/* line 284, ../scss/app.scss */
+.projectDetails p, .projectDetails hr {
+  opacity: 0;
+  transition: opacity 0.6s ease-out;
+}
+
+/* line 288, ../scss/app.scss */
+.projectDetails.detailed p, .projectDetails.detailed hr {
+  opacity: 1;
+  transition: opacity 0.6s ease-out;
+}
+
+@media only screen {
+  /* line 292, ../scss/app.scss */
+  .projectGallery {
+    z-index: 10;
+  }
+}
+
+/* line 298, ../scss/app.scss */
+.slick-prev {
+  left: 40%;
+}
+
+/* line 301, ../scss/app.scss */
+.slick-next {
+  right: 40%;
+}
+
+/* line 304, ../scss/app.scss */
+.slick-prev, .slick-next {
+  top: 110%;
 }
