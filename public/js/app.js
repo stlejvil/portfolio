@@ -142,7 +142,7 @@ function keysAllowed(index, slideIndex) {
 	disallowKeyboard();
 
 	if (index == 1 && slideIndex == 0) {		// Au chargement de la contactPage
-		$.fn.fullpage.setAllowScrolling(true);
+		$.fn.fullpage.setAllowScrolling(true, 'right');
 		$.fn.fullpage.setKeyboardScrolling(true, 'right');
 	} else if (index == 1 && slideIndex == 1) {	// Au chargement de la mainPage
 		$.fn.fullpage.setAllowScrolling(true, 'down, left');
