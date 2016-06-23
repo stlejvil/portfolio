@@ -2476,32 +2476,56 @@ video {
   float: right;
 }
 
-/* line 193, ../scss/app.scss */
-.projectCover, .projectGallery {
-  margin-top: 25px;
+@media only screen and (max-width: 40em) {
+  /* line 193, ../scss/app.scss */
+  hr {
+    margin: 0 0 7px 0;
+  }
 }
 
-/* line 197, ../scss/app.scss */
+/* line 199, ../scss/app.scss */
+.projectCover {
+  margin-top: 25px;
+}
+@media only screen and (max-width: 40em) {
+  /* line 199, ../scss/app.scss */
+  .projectCover {
+    margin-top: 0;
+  }
+}
+
+/* line 206, ../scss/app.scss */
+.projectGallery {
+  margin-top: 15px;
+}
+
+/* line 210, ../scss/app.scss */
 .projectDetails h2, .projectAbstract h2 {
   display: block;
   color: #333;
   margin-top: -12px;
 }
+@media only screen and (max-width: 40em) {
+  /* line 210, ../scss/app.scss */
+  .projectDetails h2, .projectAbstract h2 {
+    margin-bottom: 0;
+  }
+}
 
-/* line 210, ../scss/app.scss */
+/* line 226, ../scss/app.scss */
 .projectDetails h2 span,
 .projectAbstract h2 span {
   font-size: 1.6em;
 }
 @media only screen and (max-width: 40em) {
-  /* line 210, ../scss/app.scss */
+  /* line 226, ../scss/app.scss */
   .projectDetails h2 span,
   .projectAbstract h2 span {
     font-size: 1.05em;
   }
 }
 
-/* line 220, ../scss/app.scss */
+/* line 236, ../scss/app.scss */
 .projectAbstract {
   position: fixed;
   opacity: 0;
@@ -2511,130 +2535,131 @@ video {
   transition: right 0.6s ease, opacity 0.6s ease-out;
 }
 @media only screen and (max-width: 40em) {
-  /* line 220, ../scss/app.scss */
+  /* line 236, ../scss/app.scss */
   .projectAbstract {
     top: 50vh;
     right: 0;
   }
-  /* line 233, ../scss/app.scss */
+  /* line 249, ../scss/app.scss */
   .projectAbstract p {
-    font-size: 0.9rem;
+    font-size: .8rem;
     margin-bottom: .8rem;
   }
 }
 
-/* line 239, ../scss/app.scss */
+/* line 255, ../scss/app.scss */
 .projectAbstract.detailed {
   right: 66.7vw;
 }
 
-/* line 242, ../scss/app.scss */
+/* line 258, ../scss/app.scss */
 .projectAbstract.active {
   opacity: 1;
   z-index: 10;
 }
 
-/* line 246, ../scss/app.scss */
+/* line 262, ../scss/app.scss */
 .projectAbstract .goForward {
   opacity: 1;
   float: right;
   transition: opacity 0.6s ease-out;
 }
 
-/* line 252, ../scss/app.scss */
+/* line 268, ../scss/app.scss */
 .projectAbstract.detailed .goForward {
   opacity: 0;
 }
 
-/* line 258, ../scss/app.scss */
+/* line 274, ../scss/app.scss */
 .projectAbstract h2 > span {
   visibility: hidden;
   white-space: nowrap;
 }
 
-/* line 263, ../scss/app.scss */
+/* line 279, ../scss/app.scss */
 .projectAbstract strong {
   font-size: 1rem;
   background-color: yellow;
 }
 
-/* line 287, ../scss/app.scss */
+/* line 303, ../scss/app.scss */
 .projectDetails {
   position: absolute;
   z-index: 20;
 }
 @media only screen and (max-width: 40em) {
-  /* line 287, ../scss/app.scss */
+  /* line 303, ../scss/app.scss */
   .projectDetails {
     top: 50vh;
     z-index: 10;
   }
-  /* line 294, ../scss/app.scss */
+  /* line 310, ../scss/app.scss */
   .projectDetails p {
-    font-size: 0.9rem;
+    font-size: .8rem;
     margin-bottom: .8rem;
   }
 }
 
-/* line 305, ../scss/app.scss */
+/* line 321, ../scss/app.scss */
 .projectDetails h2 span {
   margin-left: -80vw;
   transition: margin-left 0.6s ease-in-out;
 }
 @media only screen and (max-width: 40em) {
-  /* line 305, ../scss/app.scss */
+  /* line 321, ../scss/app.scss */
   .projectDetails h2 span {
     margin-left: -100vw;
   }
 }
 
-/* line 319, ../scss/app.scss */
+/* line 335, ../scss/app.scss */
 .projectDetails.detailed h2 span {
   margin-left: 0vw;
 }
 
-/* line 323, ../scss/app.scss */
+/* line 339, ../scss/app.scss */
 .projectAbstract p, .projectAbstract hr {
   opacity: 1;
   transition: opacity 0.6s ease-out;
 }
 
-/* line 327, ../scss/app.scss */
+/* line 343, ../scss/app.scss */
 .projectAbstract.detailed p, .projectAbstract.detailed hr {
   opacity: 0;
   transition: opacity 0.6s ease-out;
 }
 
-/* line 331, ../scss/app.scss */
+/* line 347, ../scss/app.scss */
 .projectDetails p, .projectDetails hr {
   opacity: 0;
   transition: opacity 0.6s ease-out;
 }
 
-/* line 335, ../scss/app.scss */
+/* line 351, ../scss/app.scss */
 .projectDetails.detailed p, .projectDetails.detailed hr {
   opacity: 1;
   transition: opacity 0.6s ease-out;
 }
 
 @media only screen {
-  /* line 339, ../scss/app.scss */
+  /* line 355, ../scss/app.scss */
   .projectGallery {
     z-index: 10;
   }
 }
 
-/* line 345, ../scss/app.scss */
+/* line 361, ../scss/app.scss */
 .slick-prev {
   left: 40%;
 }
 
-/* line 348, ../scss/app.scss */
+/* line 364, ../scss/app.scss */
 .slick-next {
   right: 40%;
 }
 
-/* line 351, ../scss/app.scss */
+/* line 367, ../scss/app.scss */
 .slick-prev, .slick-next {
   top: 110%;
+  z-index: 20;
 }
