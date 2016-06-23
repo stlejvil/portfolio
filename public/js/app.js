@@ -74,7 +74,9 @@ $(document).ready(function() {
 		},
 		'afterRender': function() {
 			// console.log('afterRender');
-			$('.single-item').slick();
+			$('.single-item').slick({
+				swipe: false
+			});
 		},
 		'afterResize': function() {
 			// console.log('afterResize');

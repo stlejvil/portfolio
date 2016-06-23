@@ -2394,51 +2394,27 @@ video {
   max-width: initial;
 }
 
-/* line 86, ../scss/app.scss */
-.borderTop, .borderBottom {
-  display: block;
-  width: 100%;
-  position: absolute;
-  height: 80px;
-  background-color: #efefed;
-}
-
-/* line 94, ../scss/app.scss */
-.borderTop {
-  top: 0;
-}
-
-/* line 98, ../scss/app.scss */
-.borderBottom {
-  bottom: 0;
-}
-
-/* line 102, ../scss/app.scss */
-.linkStyle {
-  font-size: 2em;
-  color: #bbb;
-  text-decoration: none;
-  background: none;
-  border: none;
-  margin-top: 2px;
-}
-
-/* line 110, ../scss/app.scss */
-.linkStyle.toggleGo {
-  margin-left: -39px;
-}
-
-/* line 113, ../scss/app.scss */
-.linkStyle.toggleBack {
-  margin-left: -41px;
-}
-
 /* line 116, ../scss/app.scss */
+#contactContent {
+  padding: 80px 10vw;
+}
+/* line 119, ../scss/app.scss */
 #contactContent p {
   line-height: 2em;
 }
+@media only screen and (max-width: 40em) {
+  /* line 116, ../scss/app.scss */
+  #contactContent {
+    padding: 10px;
+  }
+  /* line 126, ../scss/app.scss */
+  #contactContent p {
+    line-height: 1.8em;
+    font-size: .75rem;
+  }
+}
 
-/* line 122, ../scss/app.scss */
+/* line 136, ../scss/app.scss */
 #github, #contactIcon {
   position: absolute;
   bottom: 6px;
@@ -2449,7 +2425,7 @@ video {
   color: #000;
 }
 
-/* line 135, ../scss/app.scss */
+/* line 149, ../scss/app.scss */
 #contactIcon {
   width: 32px;
   height: 32px;
@@ -2461,7 +2437,7 @@ video {
   cursor: pointer;
 }
 
-/* line 146, ../scss/app.scss */
+/* line 160, ../scss/app.scss */
 #contactIcon i {
   color: #efefed;
   font-size: 30px;
@@ -2469,7 +2445,7 @@ video {
   padding: 4px 0 0 4px;
 }
 
-/* line 153, ../scss/app.scss */
+/* line 167, ../scss/app.scss */
 #detailsPage #detailsContent {
   padding: 0;
   padding-left: 15px;
@@ -2478,34 +2454,54 @@ video {
   float: right;
 }
 
-/* line 161, ../scss/app.scss */
+/* line 175, ../scss/app.scss */
 #detailsPage #detailsContent div.single-item {
   width: 100%;
   height: 100%;
   position: absolute;
 }
 
-/* line 167, ../scss/app.scss */
+/* line 181, ../scss/app.scss */
 .slick-prev:before, .slick-next:before {
   color: #c6c6c6;
 }
 
-/* line 171, ../scss/app.scss */
+/* line 185, ../scss/app.scss */
 #fullpage .section figure img {
   padding: 0;
 }
 
-/* line 175, ../scss/app.scss */
+/* line 189, ../scss/app.scss */
 #contactPage .goForward {
   float: right;
 }
 
-/* line 179, ../scss/app.scss */
+/* line 193, ../scss/app.scss */
 .projectCover, .projectGallery {
   margin-top: 25px;
 }
 
-/* line 183, ../scss/app.scss */
+/* line 197, ../scss/app.scss */
+.projectDetails h2, .projectAbstract h2 {
+  display: block;
+  color: #333;
+  margin-top: -12px;
+}
+
+/* line 210, ../scss/app.scss */
+.projectDetails h2 span,
+.projectAbstract h2 span {
+  font-size: 1.6em;
+}
+@media only screen and (max-width: 40em) {
+  /* line 210, ../scss/app.scss */
+  .projectDetails h2 span,
+  .projectAbstract h2 span {
+    font-size: 1.05em;
+  }
+}
+
+/* line 220, ../scss/app.scss */
 .projectAbstract {
   position: fixed;
   opacity: 0;
@@ -2515,138 +2511,130 @@ video {
   transition: right 0.6s ease, opacity 0.6s ease-out;
 }
 @media only screen and (max-width: 40em) {
-  /* line 183, ../scss/app.scss */
+  /* line 220, ../scss/app.scss */
   .projectAbstract {
-    top: 35vh;
+    top: 50vh;
     right: 0;
+  }
+  /* line 233, ../scss/app.scss */
+  .projectAbstract p {
+    font-size: 0.9rem;
+    margin-bottom: .8rem;
   }
 }
 
-/* line 197, ../scss/app.scss */
+/* line 239, ../scss/app.scss */
 .projectAbstract.detailed {
   right: 66.7vw;
 }
 
-/* line 200, ../scss/app.scss */
+/* line 242, ../scss/app.scss */
 .projectAbstract.active {
   opacity: 1;
   z-index: 10;
 }
 
-/* line 204, ../scss/app.scss */
+/* line 246, ../scss/app.scss */
 .projectAbstract .goForward {
   opacity: 1;
   float: right;
   transition: opacity 0.6s ease-out;
 }
 
-/* line 210, ../scss/app.scss */
+/* line 252, ../scss/app.scss */
 .projectAbstract.detailed .goForward {
   opacity: 0;
 }
 
-/* line 216, ../scss/app.scss */
+/* line 258, ../scss/app.scss */
 .projectAbstract h2 > span {
   visibility: hidden;
   white-space: nowrap;
 }
 
-/* line 221, ../scss/app.scss */
+/* line 263, ../scss/app.scss */
 .projectAbstract strong {
   font-size: 1rem;
   background-color: yellow;
 }
 
-/* line 230, ../scss/app.scss */
-.projectDetails h2, .projectAbstract h2 {
-  display: block;
-  color: #333;
-  margin-top: -12px;
-}
-
-/* line 238, ../scss/app.scss */
-.projectDetails h2 span, .projectAbstract h2 span {
-  font-size: 1.6em;
-}
-@media only screen and (max-width: 40em) {
-  /* line 238, ../scss/app.scss */
-  .projectDetails h2 span, .projectAbstract h2 span {
-    font-size: 1.2em;
-  }
-}
-
-/* line 245, ../scss/app.scss */
+/* line 287, ../scss/app.scss */
 .projectDetails {
   position: absolute;
   z-index: 20;
 }
 @media only screen and (max-width: 40em) {
-  /* line 245, ../scss/app.scss */
+  /* line 287, ../scss/app.scss */
   .projectDetails {
     top: 50vh;
     z-index: 10;
   }
+  /* line 294, ../scss/app.scss */
+  .projectDetails p {
+    font-size: 0.9rem;
+    margin-bottom: .8rem;
+  }
 }
 
-/* line 258, ../scss/app.scss */
+/* line 305, ../scss/app.scss */
 .projectDetails h2 span {
   margin-left: -80vw;
   transition: margin-left 0.6s ease-in-out;
 }
 @media only screen and (max-width: 40em) {
-  /* line 258, ../scss/app.scss */
+  /* line 305, ../scss/app.scss */
   .projectDetails h2 span {
     margin-left: -100vw;
   }
 }
 
-/* line 272, ../scss/app.scss */
+/* line 319, ../scss/app.scss */
 .projectDetails.detailed h2 span {
   margin-left: 0vw;
 }
 
-/* line 276, ../scss/app.scss */
+/* line 323, ../scss/app.scss */
 .projectAbstract p, .projectAbstract hr {
   opacity: 1;
   transition: opacity 0.6s ease-out;
 }
 
-/* line 280, ../scss/app.scss */
+/* line 327, ../scss/app.scss */
 .projectAbstract.detailed p, .projectAbstract.detailed hr {
   opacity: 0;
   transition: opacity 0.6s ease-out;
 }
 
-/* line 284, ../scss/app.scss */
+/* line 331, ../scss/app.scss */
 .projectDetails p, .projectDetails hr {
   opacity: 0;
   transition: opacity 0.6s ease-out;
 }
 
-/* line 288, ../scss/app.scss */
+/* line 335, ../scss/app.scss */
 .projectDetails.detailed p, .projectDetails.detailed hr {
   opacity: 1;
   transition: opacity 0.6s ease-out;
 }
 
 @media only screen {
-  /* line 292, ../scss/app.scss */
+  /* line 339, ../scss/app.scss */
   .projectGallery {
     z-index: 10;
   }
 }
 
-/* line 298, ../scss/app.scss */
+/* line 345, ../scss/app.scss */
 .slick-prev {
   left: 40%;
 }
 
-/* line 301, ../scss/app.scss */
+/* line 348, ../scss/app.scss */
 .slick-next {
   right: 40%;
 }
 
-/* line 304, ../scss/app.scss */
+/* line 351, ../scss/app.scss */
 .slick-prev, .slick-next {
   top: 110%;
 }
