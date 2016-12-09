@@ -1,7 +1,6 @@
 /public/.sass-cache/*
 /public/*.bowerrc
 /public/backup/*
-/public/cv.pdf
 /public/stylesheets/dossier sans titre
 *.DS_Store
 /.openshift/*
