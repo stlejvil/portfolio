@@ -2,6 +2,7 @@
 /public/*.bowerrc
 /public/backup/*
 /public/stylesheets/dossier sans titre
+/public/README.md
 *.DS_Store
 /.openshift/*
 /openshiftBackup/*
