@@ -4,6 +4,8 @@
 var project;
 var _slideIndex = 0;
 var flag = 1;
+var slidesContainerForwardStyles;
+var slidesContainerNeutralStyles;
 
 $(document).ready(function() {
 	// $('.single-item').slick();
@@ -74,8 +76,28 @@ $(document).ready(function() {
 		},
 		'afterRender': function() {
 			// console.log('afterRender');
+			var host = window.location.origin+'/';
+			var pathArray = window.location.href;
+			pathArray = pathArray.replace(host,'');
+			$.fn.fullpage.silentMoveTo(1, 1);	// moveTo mainpage soit /#home/welcome
+
+			if (pathArray.length > 0) {
+				pathArray = pathArray.replace('#','').split('/');
+				if (pathArray.length > 1) {
+					$.fn.fullpage.silentMoveTo(pathArray[0], pathArray[1]);
+				} else {
+					$.fn.fullpage.silentMoveTo(pathArray[0], 0);
+				};
+			};
+			
 			$('.single-item').slick({
-				swipe: false
+				swipe: false,
+				autoplay: true,
+				autoplaySpeed: 2000
+			});
+			$('.single-item').slickLightbox({
+				itemSelector: '> div > div > img',
+				src:'src'
 			});
 		},
 		'afterResize': function() {
@@ -87,7 +109,34 @@ $(document).ready(function() {
 			// console.log('slideAnchor : '+slideAnchor);
 			// console.log('slideIndex : '+slideIndex);
 
+			if(index == 1 && slideIndex == 0) { // Sur la contactPage
+				$('.projectAbstract').show();
+				$('.projectAbstract').removeClass('fixed detailed active').onCSSTransitionEnd( function() {
+					$('.projectAbstract').show();
+				});
+				$('.projectDetails').removeClass('detailed');
+				$('.projectCover').addClass('active');
+				$('.slide.row[data-anchor=details]').removeClass('active');
+				$('.fp-slidesContainer').attr('style', slidesContainerNeutralStyles);
+			};
+			if(index == 1 && slideIndex == 1) { // Sur la mainPage
+				slidesContainerForwardStyles = $('.section[data-anchor=home] .fp-slidesContainer').attr('style');
+			};
+			if(index > 1 && slideIndex == 0) { // Sur la projectPage
+				
+			};
+			if(index > 1 && slideIndex > 0) { // Sur la detailPage
+				
+			};
+
 			keysAllowed(index, slideIndex);
+
+			$('.single-item').slickLightbox().on({
+				'show.slickLightbox': function(){ disallowKeyboard(); },
+				// 'shown.slickLightbox': function(){ console.log('A `shown.slickLightbox` event triggered.'); },
+				'hide.slickLightbox': function(){ keysAllowed(index, slideIndex); }
+				// 'hidden.slickLightbox': function(){ console.log('A `hidden.slickLightbox` event triggered.'); }
+			});
 			
 		},
 		'onSlideLeave': function( anchorLink, index, slideIndex, direction ) {
@@ -97,12 +146,16 @@ $(document).ready(function() {
 			// console.log('direction : '+direction);
 
 			disallowKeyboard();
-
+			
 			if(index > 1 && direction == 'right') {	// Au chargement de la detailsPage
+				slidesContainerNeutralStyles = $('.section.active .fp-slidesContainer').attr('style');
 				$('.projectAbstract').addClass('detailed').onCSSTransitionEnd( function() {
 					$('.projectAbstract').hide();
+					$('.fp-slidesContainer').attr('style', slidesContainerForwardStyles);
 				});
 				$('.projectDetails').addClass('detailed');
+				$('.projectCover').removeClass('active');
+				$('.slide.row[data-anchor=details]').addClass('active');
 			};
 			if(index > 1 && direction == 'left') {	// Au chargement de la projectPage
 				$('.projectAbstract').show();
@@ -110,13 +163,16 @@ $(document).ready(function() {
 					$('.projectAbstract').show();
 				});
 				$('.projectDetails').removeClass('detailed');
+				$('.projectCover').addClass('active');
+				$('.slide.row[data-anchor=details]').removeClass('active');
+				$('.fp-slidesContainer').attr('style', slidesContainerNeutralStyles);
+				$('.section[data-anchor=home] .fp-slidesContainer').attr('style', slidesContainerForwardStyles);
 			};
 			if(index == 1 && direction == 'left') {	// Au chargement de la contactPage
 				$('.projectAbstract').show();
 				$('.projectAbstract').removeClass('fixed detailed active').onCSSTransitionEnd( function() {
 					$('.projectAbstract').show();
 				});
-
 			}
 			if(index == 1 && direction == 'right') {	// Au chargement de la mainPage
 				$('.projectAbstract').addClass('fixed');

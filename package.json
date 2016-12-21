@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "Bleiz's portfolio",
   "keywords": [
     "OpenShift",
@@ -12,7 +12,7 @@
     "email": "arnaud.pigne@gmail.com",
     "url": "http://www.bleiz.be"
   },
-  "homepage": "http://www.bleiz.be",
+  "homepage": "http://portfolio-stlejvil.rhcloud.com/",
   "repository": {
     "type": "git",
     "url": "https://github.com/stlejvil"
