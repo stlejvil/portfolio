@@ -42,7 +42,7 @@ var SampleApp = function() {
         }
 
         //  Local cache for static content.
-        self.zcache['index.jade'] = fs.readFileSync('./public/index.jade');
+        self.zcache['index.jade'] = fs.readFileSync('./views/index.jade');
     };
 
 
@@ -100,8 +100,9 @@ var SampleApp = function() {
         };
 
         self.routes['/'] = function(req, res) {
-            res.setHeader('Content-Type', 'text/html');
-            res.send(self.cache_get('index.jade') );
+            // res.setHeader('Content-Type', 'text/html');
+            // res.send(self.cache_get('index.jade') );
+            res.render('index.jade');
         };
     };
 
@@ -114,6 +115,7 @@ var SampleApp = function() {
         self.createRoutes();
         // self.app = express.createServer();
         self.app = express();
+        self.app.engine('jade', require('jade').__express);
 
         //  Add handlers for the app (from the routes).
         for (var r in self.routes) {
