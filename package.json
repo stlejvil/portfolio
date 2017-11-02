@@ -1,12 +1,13 @@
 {
   "name": "portfolio",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "description": "Bleiz's portfolio",
   "main": "server.js",
   "dependencies": {
     "express": "~3.4.4",
     "serve-static": ">=1.5.3",
-    "jade":">=1.5.0"
+    "jade":">=1.5.0",
+    "fs":"*"
   },
   "engine": {
     "node": "*",
